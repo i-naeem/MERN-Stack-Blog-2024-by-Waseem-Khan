@@ -4,6 +4,7 @@ const router = express.Router();
 const Post = require('../models/Posts');
 
 /* GET home page. */
+
 router.get('/', async function (req, res, next) {
   try {
     const posts = await Post.find({premium: false});
